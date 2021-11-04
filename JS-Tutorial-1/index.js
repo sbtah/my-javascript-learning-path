@@ -73,8 +73,8 @@ let welcomeName = 'Grzegorz';
 let welocomeGreeting = 'Welcome back';
 let newGreeting = `${welocomeGreeting} ${welcomeName}`
 
-welcomeEl.innerText = newGreeting;
-welcomeEl.innerText += ':)'
+welcomeEl.textContent = newGreeting;
+welcomeEl.textContent += ':)'
 
 
 // Counter App
@@ -84,14 +84,16 @@ let saveEl = document.getElementById('save-el');
 
 function increment() {
     count += 1;
-    countEl.innerText = count
+    countEl.textContent = count
 }
 
 function save() {
-    let currentCount = ` ${count} - `;
-    saveEl.innerText += currentCount;
+    let currentCount = `${count} - `;
+    saveEl.textContent += currentCount;
+    count = 0
+    countEl.textContent = count
 };
-// save()
+
 
 
 
