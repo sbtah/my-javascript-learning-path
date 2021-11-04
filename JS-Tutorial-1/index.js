@@ -55,13 +55,43 @@ inrementLaps();
 // console.log(lapsCompleted);
 
 
+let username = 'per';
+let message = 'You have three new notifications';
+let messageToUser = `${message} ${username}!`
+
+
+// Next Challenge ....
+let myName = 'Grzegorz';
+let greeting = 'Hi my name is:';
+let myGreeting = `${greeting} ${myName}`;
+// console.log(myGreeting);
+
+
+// Welcome Challange ....
+let welcomeEl = document.getElementById('welcome-el');
+let welcomeName = 'Grzegorz';
+let welocomeGreeting = 'Welcome back';
+let newGreeting = `${welocomeGreeting} ${welcomeName}`
+
+welcomeEl.innerText = newGreeting;
+welcomeEl.innerText += ':)'
+
+
 // Counter App
 let count = 0;
-let countEl = document.getElementById('count-el')
-console.log(countEl)
+let countEl = document.getElementById('count-el');
+let saveEl = document.getElementById('save-el');
 
 function increment() {
     count += 1;
-    document.getElementById('count-el').innerText = count;
+    countEl.innerText = count
+}
+
+function save() {
+    let currentCount = ` ${count} - `;
+    saveEl.innerText += currentCount;
 };
+// save()
+
+
 
