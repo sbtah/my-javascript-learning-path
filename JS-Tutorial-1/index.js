@@ -76,11 +76,50 @@ let newGreeting = `${welocomeGreeting} ${welcomeName}`
 welcomeEl.textContent = newGreeting;
 welcomeEl.textContent += ':)'
 
+// Challenge again .....
+let firstName = 'Grzegorz';
+let lastName = 'BobuBobu';
+let fullName = `${firstName} ${lastName}`; // this is same as python's fstrings..
+let newGreeting2 = 'Hi there'
+
+function greet() {
+    console.log(`${newGreeting2} ${fullName}!`);
+};
+// greet()
+
+
+// Challenge again .....
+let myPoints = 3;
+function add3Points() {
+    myPoints += 3;
+};
+
+function remove1Point() {
+    myPoints -= 1;
+};
+
+// console.log(myPoints);
+// add3Points();
+// add3Points();
+// remove1Point();
+// remove1Point();
+// add3Points();
+// console.log(myPoints);
+
+
+// Challange ...
+let errorMsg = document.getElementById('error');
+
+function error() {
+    errorMsg.textContent = 'Something went wrong, please try again.';
+};
 
 // Counter App
+// let totalNumber = 0;
 let count = 0;
 let countEl = document.getElementById('count-el');
 let saveEl = document.getElementById('save-el');
+// let totalEl = document.getElementById('total-el');
 
 function increment() {
     count += 1;
@@ -88,6 +127,7 @@ function increment() {
 }
 
 function save() {
+
     let currentCount = `${count} - `;
     saveEl.textContent += currentCount;
     count = 0
