@@ -10,23 +10,23 @@ sumEL = document.getElementById('sum-el');
 function add() {
     console.log('This adds!');
     result = num1 + num2;
-    sumEL.textContent = result;
+    sumEL.textContent = 'Sum:' + result;
 };
 
 function subtract() {
     console.log('This subtracts!');
     result = num1 - num2;
-    sumEL.textContent = result;
+    sumEL.textContent = 'Sum:' + result;
 };
 
 function divide() {
     console.log('This divides!');
     result = num1 / num2;
-    sumEL.textContent = result;
+    sumEL.textContent = 'Sum:' + result;
 };
 
 function multiply() {
     console.log('This multiplies!');
     result = num1 * num2;
-    sumEL.textContent = result;
+    sumEL.textContent = 'Sum:' + result;
 };
