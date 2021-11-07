@@ -1,5 +1,5 @@
-let firstCard = 7;
-let secondCard = 11;
+let firstCard = getRandomCard();
+let secondCard = getRandomCard();
 let allCards = [firstCard, secondCard];
 let sum = firstCard + secondCard;
 let hasBlackJack = false;
@@ -9,6 +9,12 @@ let messageEl = document.getElementById('message-el');
 // let sumEl = document.getElementById('sum-el');
 let sumEl = document.querySelector('#sum-el');
 let cardsEl = document.querySelector('#cards-el');
+
+
+
+function getRandomCard() {
+    return 5
+};
 
 
 function startGame() {
@@ -30,27 +36,26 @@ function renderGame() {
 
     messageEl.textContent = message;
     sumEl.textContent = 'Sum: ' + sum;
-    cardsEl.textContent = 'Cards: ' + allCards[0] + " " + allCards[1];
+    cardsEl.textContent = "Cards: ";
 
+    for (i = 0; i < allCards.length; i++) {
+        cardsEl.textContent += allCards[i] + ", ";
+    };
 };
 
 
 function newCard() {
 
-    if (allCards.length < 3) {
-
-        let thirdCard = 6;
+    if (sum < 21) {
+        let thirdCard = getRandomCard();
         allCards.push(thirdCard);
         sum += thirdCard;
         renderGame();
-
     }
 };
 
 
-
-
-
+// ====================================================================== //
 // ====================================================================== //
 // Challenge 1.
 let age = 20;
