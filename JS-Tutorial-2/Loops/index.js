@@ -53,5 +53,17 @@ let totalTime = totalRaceTime();
 
 
 
-let randomNumber = Math.random() * 6;
-console.log(randomNumber);
+let randomCard = Math.floor(Math.random() * 21) + 1;
+
+
+let hasCompletedCourse = true;
+let givesCertificate = true;
+
+if (hasCompletedCourse && givesCertificate) {
+    generateCertificate();
+};
+
+function generateCertificate() {
+    console.log('Generating Certificate...');
+};
+

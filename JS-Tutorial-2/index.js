@@ -1,24 +1,47 @@
-let firstCard = getRandomCard();
-let secondCard = getRandomCard();
-let allCards = [firstCard, secondCard];
-let sum = firstCard + secondCard;
+let allCards = [];
+let sum = 0;
 let hasBlackJack = false;
-let isAlive = true;
+let isAlive = false;
 let message = '';
 let messageEl = document.getElementById('message-el');
 // let sumEl = document.getElementById('sum-el');
 let sumEl = document.querySelector('#sum-el');
 let cardsEl = document.querySelector('#cards-el');
+let playerEl = document.getElementById('player-el');
+let player = {
+    name: 'Grze',
+    chips: 145,
+};
 
 
+playerEl.textContent = player.name + ": $" + player.chips;
 
 function getRandomCard() {
-    return 5
+
+    randomCard = Math.floor(Math.random() * 13) + 1;
+
+    if (randomCard === 1) {
+        return 11
+    } else if (randomCard > 10) {
+        return 10
+    } else {
+        return randomCard
+    };
 };
 
 
 function startGame() {
-    renderGame();
+
+    if (allCards.length < 2) {
+
+        isAlive = true;
+        let firstCard = getRandomCard();
+        let secondCard = getRandomCard();
+        sum = firstCard + secondCard;
+        allCards.push(firstCard);
+        allCards.push(secondCard);
+        renderGame();
+    };
 };
 
 
@@ -46,7 +69,7 @@ function renderGame() {
 
 function newCard() {
 
-    if (sum < 21) {
+    if (isAlive === true && hasBlackJack === false) {
         let thirdCard = getRandomCard();
         allCards.push(thirdCard);
         sum += thirdCard;
