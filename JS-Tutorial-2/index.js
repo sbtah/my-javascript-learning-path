@@ -1,3 +1,7 @@
+let player = {
+    name: 'Grze',
+    chips: 145,
+};
 let allCards = [];
 let sum = 0;
 let hasBlackJack = false;
@@ -8,11 +12,6 @@ let messageEl = document.getElementById('message-el');
 let sumEl = document.querySelector('#sum-el');
 let cardsEl = document.querySelector('#cards-el');
 let playerEl = document.getElementById('player-el');
-let player = {
-    name: 'Grze',
-    chips: 145,
-};
-
 
 playerEl.textContent = player.name + ": $" + player.chips;
 

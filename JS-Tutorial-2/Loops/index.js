@@ -67,3 +67,13 @@ function generateCertificate() {
     console.log('Generating Certificate...');
 };
 
+let castleToRent = {
+    location: 'Austria',
+    build: '1918',
+    numberOfRooms: 38,
+    isAvailable: true,
+    availableCars: ['Toyota', 'Mercedes', 'BWM']
+}
+
+console.log(castleToRent.isAvailable);
+console.log(castleToRent.availableCars[0]);
