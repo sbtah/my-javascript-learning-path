@@ -77,3 +77,34 @@ let castleToRent = {
 
 console.log(castleToRent.isAvailable);
 console.log(castleToRent.availableCars[0]);
+
+
+let person = {
+    name: 'Grze',
+    age: 22,
+    country: 'Poland',
+    logData: function () {
+        return `${this.name} is ${this.age} and lives in ${this.country}.`
+    }
+};
+
+let age = 22;
+
+if (age < 6) {
+    console.log('Free');
+} else if (age >= 6 && age <= 17) {
+    console.log('Child discount.');
+} else if (age >= 18 && age <= 26) {
+    console.log('Student discount.');
+} else if (age >= 27 && age <= 66) {
+    console.log('Full price.');
+} else {
+    console.log('Senior discount.');
+};
+
+
+let largeCountries = ['China', 'India', 'USA', 'Indonesia', 'Pakistan'];
+
+for (i = 0; i < largeCountries.length; i++) {
+    console.log(largeCountries[i]);
+};
