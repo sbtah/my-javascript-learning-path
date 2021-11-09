@@ -59,13 +59,13 @@ let randomCard = Math.floor(Math.random() * 21) + 1;
 let hasCompletedCourse = true;
 let givesCertificate = true;
 
-if (hasCompletedCourse && givesCertificate) {
-    generateCertificate();
-};
+// if (hasCompletedCourse && givesCertificate) {
+//     generateCertificate();
+// };
 
-function generateCertificate() {
-    console.log('Generating Certificate...');
-};
+// function generateCertificate() {
+//     console.log('Generating Certificate...');
+// };
 
 let castleToRent = {
     location: 'Austria',
@@ -75,8 +75,8 @@ let castleToRent = {
     availableCars: ['Toyota', 'Mercedes', 'BWM']
 }
 
-console.log(castleToRent.isAvailable);
-console.log(castleToRent.availableCars[0]);
+// console.log(castleToRent.isAvailable);
+// console.log(castleToRent.availableCars[0]);
 
 
 let person = {
@@ -103,8 +103,58 @@ if (age < 6) {
 };
 
 
-let largeCountries = ['China', 'India', 'USA', 'Indonesia', 'Pakistan'];
+// let largeCountries = ['China', 'India', 'USA', 'Indonesia', 'Pakistan'];
 
-for (i = 0; i < largeCountries.length; i++) {
-    console.log(largeCountries[i]);
+// for (i = 0; i < largeCountries.length; i++) {
+//     console.log(largeCountries[i]);
+// };
+
+
+// let largeCountries = ['Tuvalu', 'India', 'USA', 'Indonesia', 'Monaco'];
+
+// largeCountries.shift();
+// largeCountries.unshift("China");
+// largeCountries.pop();
+// largeCountries.push('Pakistan');
+
+
+// console.log(largeCountries);
+
+
+let dayOfMonth = 31;
+let weekday = 'Friday';
+
+if (dayOfMonth === 13 && weekday === 'Friday') {
+    console.log('Buuuu');
+
+}
+
+// let hands = ['rock', 'paper', 'scissor'];
+
+// function randomItem() {
+//     let item = Math.floor(Math.random() * 3)
+//     return hands[item]
+// };
+
+// console.log(randomItem());
+
+let fruit = ['O', 'A', 'A', 'A', 'O'];
+let appleShelf = document.getElementById('apple-shelf');
+let orangeShelf = document.getElementById('orange-shelf');
+
+console.log(appleShelf);
+
+for (i = 0; i < fruit.length; i++) {
+
+    if (fruit[i] === 'O') {
+
+        console.log(fruit[i]);
+        appleShelf.textContent += fruit[i] + ', ';
+
+    } else if (fruit[i] === 'A') {
+
+        console.log(fruit[i]);
+        orangeShelf.textContent += fruit[i] + ', ';
+
+    };
 };
